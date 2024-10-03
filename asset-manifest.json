@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/JesusVacca/frontend-neurocode/static/css/main.d91cb6ae.css",
-    "main.js": "/JesusVacca/frontend-neurocode/static/js/main.fb6159bc.js",
-    "static/media/banner.png": "/JesusVacca/frontend-neurocode/static/media/banner.7460a15613fc7e7e77ee.png",
-    "static/media/bootstrap-icons.woff?": "/JesusVacca/frontend-neurocode/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
-    "static/media/bootstrap-icons.woff2?": "/JesusVacca/frontend-neurocode/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
-    "index.html": "/JesusVacca/frontend-neurocode/index.html",
-    "main.d91cb6ae.css.map": "/JesusVacca/frontend-neurocode/static/css/main.d91cb6ae.css.map",
-    "main.fb6159bc.js.map": "/JesusVacca/frontend-neurocode/static/js/main.fb6159bc.js.map"
+    "main.css": "/frontend-neurocode/static/css/main.892ba788.css",
+    "main.js": "/frontend-neurocode/static/js/main.b225fa24.js",
+    "static/media/banner.png": "/frontend-neurocode/static/media/banner.7460a15613fc7e7e77ee.png",
+    "static/media/bootstrap-icons.woff?": "/frontend-neurocode/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/frontend-neurocode/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "index.html": "/frontend-neurocode/index.html",
+    "main.892ba788.css.map": "/frontend-neurocode/static/css/main.892ba788.css.map",
+    "main.b225fa24.js.map": "/frontend-neurocode/static/js/main.b225fa24.js.map"
   },
   "entrypoints": [
-    "static/css/main.d91cb6ae.css",
-    "static/js/main.fb6159bc.js"
+    "static/css/main.892ba788.css",
+    "static/js/main.b225fa24.js"
   ]
 }
