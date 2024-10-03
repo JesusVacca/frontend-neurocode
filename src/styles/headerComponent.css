@@ -1,0 +1,295 @@
+
+h2{
+    text-align: start;
+    padding: .5em;
+    color: var(--rich-black);
+    font-size: 35px;
+    margin-bottom: 1em;
+    position: relative;
+}
+h2::before{
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 1px;
+    background: var(--midnight-green);
+    left: calc(50% - 125px);
+    bottom: 0;
+}
+h2::after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: var(--midnight-green);
+    left: calc(50% - 25px);
+    bottom: -1px;
+}
+.header{
+    width: 100%;
+    height: 70px;
+    background: var(--rich-black);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    padding: 0em 2em;
+    /* border: 1px solid; */
+}
+.header .hamburguesa__{
+    width: 65px;
+    height: 65px;
+    background: inherit;
+    color: var(--beige);
+    font-size: 1.7em;
+    cursor: pointer;
+    display: none;
+    border: none;
+    border-radius: 50%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+.header nav{
+    width: calc(100% - calc(65px + 123px));
+    height: auto;
+}
+.header nav ul{
+    width: 100%;
+    height: auto;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0em 1em;
+    position: relative;
+}
+
+
+
+.header nav li a{
+    display: block;
+    text-decoration: none;
+    padding: .3em 1em;
+    color: var(--beige);
+    font-size: 18px;
+    transition: all .2s ease-in-out;
+    border: 1px solid transparent;
+}
+.header nav li a.active{
+    background: var(--midnight-green);
+    border-left: 1px solid var(--beige);
+    border-top: 1px solid var(--beige);
+    /* border-right: 1px solid var(--ash-gray);
+    border-bottom: 1px solid var(--ash-gray); */
+    border-radius: .1em;
+}
+
+/* Estilos del banner */
+.banner{
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: radial-gradient(ellipse at bottom,var(--rich-black), var(--air-force-blue));
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,minmax(min(450px,100%),1fr)
+    );
+}
+.banner div{
+    overflow: hidden;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner .child__1{
+    flex-direction: column;
+    align-items: start;
+    padding: 2em;
+}
+.banner .child__1 h2,
+.banner .child__1 p{
+    max-width: 100%;
+    width: 100%;
+    padding: .8em 0em;
+}
+.banner .child__1 h2::before,
+.banner .child__1 h2::after{display: none;}
+
+.banner .child__1 button{
+    padding: .8em 3em;
+    border:none;
+    cursor: pointer;
+    background: var(--rich-black);
+    color: var(--beige);
+    border-radius: .3em;
+    text-align: end;
+    transition: all .2s ease-in-out;
+}
+.banner .child__1 button i{display: none;}
+
+.banner .child__1 button:hover{
+    span{margin-right: .5em;}
+    i{display: inline;}
+}
+
+.banner .child__1 h2{
+    font-size: 35px;
+    color: var(--rich-black);
+    display: flex;
+    text-align: start;
+}
+.banner .child__1 h2 span{
+    overflow: hidden;
+    width: 10ch;
+    height: auto;
+    white-space: nowrap;
+    animation: writing 2s steps(9) ,blink .5s infinite step-end alternate;
+    border-bottom: 1px solid var(--beige);
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin-left: .1em;
+    color: var(--beige);
+}
+
+.banner .child__1 p{
+    font-size: 18px;
+    color: var(--beige);
+    font-weight: 600;
+    line-height: 1.5;
+}
+.banner .img__container{
+    width: 65%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    animation: move 2s ease-in-out infinite;
+    position: relative;
+}
+.banner .img__container img{
+    width: 97%;
+    aspect-ratio: 1;
+    border-radius: inherit;
+    z-index: 2;
+}
+.banner .img__container::before{
+    content: "";
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    background: radial-gradient(ellipse at bottom,var(--rich-black),var(--rich-black), var(--air-force-blue), var(--beige));
+    box-shadow: 2px 2px 20px var(--midnight-green);
+    z-index: 1;
+    animation: rotate 3s infinite ease-in-out;
+}
+
+.footer{
+    width: 100%;
+    height: auto;
+    background: var(--rich-black);
+    border-top: 1px solid var(--border-color);
+}
+.footer .content__logo{
+    width: 100%;
+    padding: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.footer .copy{
+    width: 100%;
+    height: auto;
+}
+.footer .copy p{
+    width: 100%;
+    text-align: center;
+    padding: 1em 2em;
+    color: var(--beige);
+}
+.footer .redes{
+    width: 100%;
+    height: auto;
+    padding: 1em 2em;
+    display: flex;
+    gap: .7em;
+}
+.footer .redes .item__redes{
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    font-size: 1.6em;
+    color: var(--beige);
+}
+.footer .redes .item__redes:hover:nth-child(1){
+    background: blue;
+}
+.footer .redes .item__redes:hover:nth-child(2){
+    background: linear-gradient(
+        180deg,
+        purple,
+        purple,
+        red,
+        yellow
+    );
+}
+.footer .redes .item__redes:hover:nth-child(3){
+    background: rgb(8, 204, 8);
+}
+.footer .redes .item__redes:hover:nth-child(4){
+    background: red;
+}
+@keyframes move {
+    50%{transform: translateY(15px);}
+}
+@keyframes writing {
+    from{width: 1ch;}
+}
+@keyframes blink {
+    50%{border-color: transparent;}
+}
+@keyframes rotate {
+    100%{transform: rotate(360deg);}
+}
+
+
+@media screen and (max-width:920px) {
+    .header .hamburguesa__{
+        display: block;
+    }
+    
+    .banner .child__1 h2{
+        font-size: 25px;
+    }
+    .banner .img__container{
+        margin-bottom: 3em;
+        
+    }
+    .header nav{
+        position: fixed;
+        left: 0;
+        top: 0;
+        background: inherit;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-100%);
+        z-index: 9;
+    }
+    .header nav.open{
+        transform: translateX(0%);
+    }
+    .header nav ul{
+        border: 1px solid var(--border-color);
+        width: 80%;
+        height: 80%;
+        flex-direction: column;
+        justify-content: start;
+        padding: 1em;
+    }
+    .header nav li{
+        width:100%;
+    }
+}

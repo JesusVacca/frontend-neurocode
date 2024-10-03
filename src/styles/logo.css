@@ -1,0 +1,16 @@
+
+.logo{margin: 0em .5em;}
+.logo h1{
+    color: var(--beige);
+    font-size: 17px;
+    position: relative;
+    span{
+        color: var(--ash-gray);
+    }
+    i{
+        position:absolute;
+        left: calc(50% - .5em);
+        top: -1em;
+        font-size: 1.2em;
+    }
+}

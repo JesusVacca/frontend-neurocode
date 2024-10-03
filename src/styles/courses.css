@@ -1,0 +1,124 @@
+
+
+.section__courses{
+    width: 100%;
+    height: auto;
+    display: grid;
+    padding: 1em;
+    gap: .8em;
+    grid-template-columns: repeat(
+        auto-fit,minmax(min(290px,100%),300px)
+    );
+    background: var(--ash-gray);
+    place-content: center;
+}
+.box__modal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top: 0;
+    background: var(--border-color);
+    z-index: 10;
+    padding: 5em 0em;
+    display: grid;
+    place-content: center;
+}
+.box__modal .box__modal__content{
+    width: 300px;
+    height: auto;
+    background: var(--beige);
+    box-shadow: 2px 2px 20px var(--rich-black);
+    color: var(--rich-black);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    border-radius: .3em;
+}
+.box__modal .box__modal__content h3{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    background: var(--rich-black);
+    padding: 1em;
+    color: var(--beige);
+}
+.box__modal .box__modal__content p{
+    width: 100%;
+    padding: 1em;
+    font-size: 16px;
+}
+.box__modal .box__modal__content button{
+    padding: 1em 2em;
+    border: none;
+    background: var(--rich-black);
+    color: var(--beige);
+    cursor: pointer;
+    border-radius: inherit;
+    margin: .5em 0em;
+}
+.section__courses .item__course{
+    border: 1px solid;
+    overflow: hidden;
+    border-radius: .3em;
+    background: var(--midnight-green);
+    position: relative;
+}
+.section__courses .item__course img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: inherit;
+}
+.section__courses .item__course h3{
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: .5em 1em;
+    color: var(--beige);
+}
+.section__courses .item__course p{
+    font-size: 16px;
+    padding: .4em 1em;
+    max-width: 100%;
+    text-align: start;
+    color: var(--ash-gray);
+    strong{
+        color: var(--beige);
+    }
+    span{
+        margin-right: 1em;
+        strong{
+            margin-left: .5em;
+        }
+    }
+}
+.section__courses .item__course button{
+    margin: 1em;
+    font-size: 16px;
+    padding: .5em 1em;
+    border: none;
+    cursor: pointer;
+    border-radius: inherit;
+    color: var(--beige);
+    background: var(--rich-black);
+}
+.section__courses .item__course .like{
+    position: absolute;
+    top: 0;
+    right: -100%;
+
+}
+.section__courses .item__course:hover .like{
+    right: 0;
+}
+.section__courses .item__course .like button{
+    background: transparent;
+    font-size: 1.4em;
+    margin: 0;
+    padding: .5em;
+    
+}
+.section__courses .item__course .like button:active{color: red;}
