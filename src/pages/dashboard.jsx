@@ -84,7 +84,7 @@ const Header=()=>{
                                     <span><i className="bi bi-graph-up-arrow"></i></span>
                                     <span>Clasificación</span>
                                 </a>
-                                <a href='#'>
+                                <a href='#' style={{color:"red"}}>
                                     <span><i className="bi bi-door-closed-fill"></i></span>
                                     <span>Salir</span>
                                 </a>

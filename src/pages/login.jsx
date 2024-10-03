@@ -1,11 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/login.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
+
+
+
 const Login =({setIndexLink})=>{
     const [isRegiter, setIsRegister] = useState(true);
+
+    const [inputs, setInputs] = useState({
+        username:"",
+        password:""
+    });
+    
+    const handleChangeInpust =(event)=>{
+        const name = event.target.name;
+        const value = event.target.value;
+        setInputs(values=>({
+            ...values,
+            [name]:value
+        }))
+    }
+
+    
+
     useEffect(()=>{
         setIndexLink(4);
-    },[])
+    },[setIndexLink])
+
     const handleOpenForm=()=>{
         setIsRegister(!isRegiter);
     }
@@ -18,11 +39,23 @@ const Login =({setIndexLink})=>{
                         <h3>¡Inicia sesión!</h3>
                         <div className='form__row'>
                             <i className="bi bi-person-check-fill"></i>
-                            <input type='text' placeholder='Username'  name='username' id='username'/>
+                            <input 
+                                type='text' 
+                                placeholder='Username'  
+                                name='username' 
+                                id='username' 
+                                onChange={handleChangeInpust}
+                                />
                         </div>
                         <div className='form__row'>
                             <i className="bi bi-key-fill"></i>
-                            <input type='password' placeholder='Username' name='password' id='password'/>
+                            <input 
+                                type='password' 
+                                placeholder='Username' 
+                                name='password' 
+                                id='password'
+                                onChange={handleChangeInpust}
+                                />
                         </div>
                         <div className='form__row'>
                             <input type='submit' value='Entrar'/>
@@ -37,19 +70,24 @@ const Login =({setIndexLink})=>{
                     <form className='form register'>
                         <h3>¡Registrate!</h3>
                         <div className='form__row'>
-                            <input type='text' placeholder='¿Cual es tu nombre?'/>
+                            <input type='text' placeholder='¿Cual es tu nombre?' name='name' id=''
+                            />
                         </div>
                         <div className='form__row'>
-                            <input type='text' placeholder='¿Cuales con tus apellidos?'/>
+                            <input type='text' placeholder='¿Cuales con tus apellidos?' name='lastname' id=''
+                            />
                         </div>
                         <div className='form__row'>
-                            <input type='number' placeholder='¿Cuales con número de telefono?'/>
+                            <input type='number' placeholder='¿Cuales con número de telefono?' name='phoneNumber' id=''
+                            />
                         </div>
                         <div className='form__row'>
-                            <input type='email' placeholder='¿Cuales con correo electronico?' value=''/>
+                            <input type='email' placeholder='¿Cuales con correo electronico?'  name='email' id=''
+                            />
                         </div>
                         <div className='form__row'>
-                            <input type='number' placeholder='¿Cuales con tus número de dni?'/>
+                            <input type='number' placeholder='¿Cuales con tus número de dni?' name='dni' id=''
+                            />
                         </div>
                         <div className='form__row'>
                             <input type='submit' value='Registrate'/>

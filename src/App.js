@@ -1,10 +1,10 @@
-import React from 'react';
-import HeaderComponet from "./components/headerComponent";
+
+import Dashboard from './pages/dashboard';
 
 function App() {
   return(
     <>
-      <HeaderComponet/>
+      <Dashboard/>
     </>
   )
 }

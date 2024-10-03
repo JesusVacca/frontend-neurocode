@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from '../img/banner.png'
+import banner from '../img/banner.webp'
 import '../styles/headerComponent.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 

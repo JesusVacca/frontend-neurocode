@@ -188,13 +188,6 @@ h2::after{
     background: var(--rich-black);
     border-top: 1px solid var(--border-color);
 }
-.footer .content__logo{
-    width: 100%;
-    padding: 1.5em;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-}
 .footer .copy{
     width: 100%;
     height: auto;
@@ -202,43 +195,10 @@ h2::after{
 .footer .copy p{
     width: 100%;
     text-align: center;
-    padding: 1em 2em;
+    padding: 2em;
     color: var(--beige);
 }
-.footer .redes{
-    width: 100%;
-    height: auto;
-    padding: 1em 2em;
-    display: flex;
-    gap: .7em;
-}
-.footer .redes .item__redes{
-    width: 40px;
-    height: 40px;
-    display: grid;
-    place-content: center;
-    border-radius: 50%;
-    font-size: 1.6em;
-    color: var(--beige);
-}
-.footer .redes .item__redes:hover:nth-child(1){
-    background: blue;
-}
-.footer .redes .item__redes:hover:nth-child(2){
-    background: linear-gradient(
-        180deg,
-        purple,
-        purple,
-        red,
-        yellow
-    );
-}
-.footer .redes .item__redes:hover:nth-child(3){
-    background: rgb(8, 204, 8);
-}
-.footer .redes .item__redes:hover:nth-child(4){
-    background: red;
-}
+
 @keyframes move {
     50%{transform: translateY(15px);}
 }
