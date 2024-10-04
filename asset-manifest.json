@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/frontend-neurocode/static/css/main.2ab9e3fd.css",
-    "main.js": "/frontend-neurocode/static/js/main.351ec179.js",
+    "main.css": "/frontend-neurocode/static/css/main.bd0a7a33.css",
+    "main.js": "/frontend-neurocode/static/js/main.ade82df4.js",
     "static/media/bootstrap-icons.woff?": "/frontend-neurocode/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
     "static/media/bootstrap-icons.woff2?": "/frontend-neurocode/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
     "static/media/course1.jpg": "/frontend-neurocode/static/media/course1.fffbb8a9cf19c3210c8d.jpg",
     "index.html": "/frontend-neurocode/index.html",
-    "main.2ab9e3fd.css.map": "/frontend-neurocode/static/css/main.2ab9e3fd.css.map",
-    "main.351ec179.js.map": "/frontend-neurocode/static/js/main.351ec179.js.map"
+    "main.bd0a7a33.css.map": "/frontend-neurocode/static/css/main.bd0a7a33.css.map",
+    "main.ade82df4.js.map": "/frontend-neurocode/static/js/main.ade82df4.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ab9e3fd.css",
-    "static/js/main.351ec179.js"
+    "static/css/main.bd0a7a33.css",
+    "static/js/main.ade82df4.js"
   ]
 }
