@@ -252,4 +252,7 @@ h2::after{
     .header nav li{
         width:100%;
     }
+    .banner{
+        height: auto;
+    }
 }

@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 
-const Contacto =()=>{
-    
+const Contacto =({setIndexLink})=>{
+    useEffect(()=>{
+        setIndexLink(2);
+    },[setIndexLink])
+
+    return(
+        <></>
+    )
 }
 export default Contacto;

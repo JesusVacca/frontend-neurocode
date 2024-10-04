@@ -76,9 +76,9 @@ const HeaderComponent=()=>{
                     </nav>
                 </header>
                 <Routes>
-                    <Route path='/' element={<BannerComponent/>}/>
+                    <Route path='/' axact element={<BannerComponent/>}/>
                     <Route path='/about' element={null}/>
-                    <Route path='/contact' element={<Contact/>}/>
+                    <Route path='/contact' element={<Contact setIndexLink = {setIndexLink}/>}/>
                     <Route path='/testimonies' element={null}/>
                     <Route path='/register' element={<Login setIndexLink = {setIndexLink} />}/>
                 </Routes>

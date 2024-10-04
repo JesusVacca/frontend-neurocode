@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import '../styles/dashboard.css'
 import LogoComponent from '../components/logoComponent';
@@ -7,21 +7,39 @@ import Courses from '../pages/courses';
 const Dashboard=()=>{
     const [openBar, setOpenBar] = useState(true);
     const [section, setSection] = useState(null);
+    const [hiddenBar, setHiddenBar] = useState(false);
+    const [classSideBar, setClassSideBar] = useState('sideBar');
+
+
     return(
         <main className='main'>
-            <Header/>
-            <SideBar asideClass={'sideBar'} openBar={openBar} setOpenBar={setOpenBar} setSection={setSection}/>
+            <Header 
+                hiddenBar={hiddenBar} 
+                setHiddenBar={setHiddenBar} 
+                setClassSideBar = {setClassSideBar}
+                />
+            <SideBar
+                classSideBar = {classSideBar}
+                setClassSideBar = {setClassSideBar}
+                openBar={openBar} 
+                setOpenBar={setOpenBar} 
+                hiddenBar={hiddenBar}
+                setSection={setSection}
+                />
             <Content openBar={openBar} section={section}/>
         </main>
     );
 }
 
 
-const SideBar=({openBar, setOpenBar, setSection})=>{    
+const SideBar=({classSideBar,setClassSideBar,openBar, setOpenBar,hiddenBar,setSection})=>{    
+
+    useEffect(()=>{
+        if(hiddenBar === true)setOpenBar(true);
+    },[hiddenBar])
+
     return(
-        <aside className={
-            openBar? 'sideBar':'sideBar open'
-        }>
+        <aside className={classSideBar}>
             <ul>
                 <li>
                     <a href='#' onClick={()=>setSection(null)}>
@@ -39,8 +57,44 @@ const SideBar=({openBar, setOpenBar, setSection})=>{
                         <span>Cursos</span>
                     </a>
                 </li>
+                <li>
+                    <a href='#' onClick={()=>setSection(<Courses/>)}>
+                        <span className='icon'>
+                            <i className="bi bi-person-vcard"></i>
+                        </span>
+                        <span>Profesores</span>
+                    </a>
+                </li>
+                <li>
+                    <a href='#' onClick={()=>setSection(<Courses/>)}>
+                        <span className='icon'>
+                            <i className="bi bi-person"></i>
+                        </span>
+                        <span>Alumnos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href='#' onClick={()=>setSection(<Courses/>)}>
+                        <span className='icon'>
+                            <i className="bi bi-book-half"></i>
+                        </span>
+                        <span>Cursos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href='#' onClick={()=>setSection(<Courses/>)}>
+                        <span className='icon'>
+                            <i className="bi bi-gear-wide-connected"></i>
+                        </span>
+                        <span>Gestion de roles</span>
+                    </a>
+                </li>
             </ul>
-            <button onClick={()=>setOpenBar(!openBar)}>
+            <button type='button' onClick={()=>{
+                setOpenBar(!openBar);
+                if(openBar) setClassSideBar("sideBar open");
+                else setClassSideBar('sideBar');
+            }}>
                 <span>
                     {
                         openBar?
@@ -54,16 +108,39 @@ const SideBar=({openBar, setOpenBar, setSection})=>{
         </aside>
     )
 }
-const Header=()=>{
+const Header=({hiddenBar, setHiddenBar,setClassSideBar})=>{
+
     const [closedProfile, setClosedProfile] = useState(false);
+
+    const handleOpen =()=>{
+        setHiddenBar(!hiddenBar);
+        if(hiddenBar){
+            setClassSideBar("sideBar");
+        }else setClassSideBar("sideBar close");
+    }
     return(
         <header className='header'>
-            <button className='hamburguesa'>
-                <i className="bi bi-list"></i>
+            <button  
+                    type='button'
+                    className='hamburguesa'
+                    onClick={handleOpen}
+                >
+                    {
+                        hiddenBar?
+                        <i className="bi bi-x"></i>
+                        :
+                        <i className="bi bi-list"></i>
+                    }
             </button>
             <LogoComponent/>
             <nav className='navBar'>
-                <button>
+                <button
+                        type='button'
+                    >
+                    <i className="bi bi-bell-fill"></i>
+                </button>
+                <button 
+                    type='button'>
                     <i className="bi bi-person-circle" onClick={()=>setClosedProfile(!closedProfile)}></i>
                     {
                         closedProfile?
@@ -97,12 +174,10 @@ const Header=()=>{
     );
 }
 
-const Content=({openBar,section})=>{
+const Content=({section})=>{
     
     return(
-        <div className={
-            openBar?'content':'content open'
-        }>
+        <div className={'content'}>
             {section}
         </div>
     )

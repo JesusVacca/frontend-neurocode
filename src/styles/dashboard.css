@@ -44,10 +44,11 @@
     font-size: 1.7em;
     cursor: pointer;
     position: relative;
+    margin-right: .5em;
 }
 .header .navBar .profile{
     position: absolute;
-    top: 100%;
+    top: 130%;
     right: 0;
     width: 250px;
     height: auto;
@@ -92,6 +93,9 @@
     overflow: hidden;
     transition: all .2s ease-in-out;
     padding: .5em 0em;
+}
+.sideBar.close{
+    transform: translateX(-100%);
 }
 .sideBar.open{
     width: 250px;
@@ -172,14 +176,13 @@
     width: calc(100% - 65px);
 }
 .content{
-    margin-left: 65px;
-    width: calc(100% - 65px);
+    width: 100%;
     height: calc(100% - 70px);
     overflow: auto;
     transition: all .2s ease-in-out;
     background: var(--ash-gray);
+    padding-left: 45px;
 }
-.content.open{
-    margin-left: 250px;
-    width: calc(100% - 250px);
+@media screen and (max-width:720px) {
+    .content{padding: 0em;}
 }
